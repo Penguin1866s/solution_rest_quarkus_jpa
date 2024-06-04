@@ -1,9 +1,12 @@
-import edu.badpals.domain.MagicalItem;
+package edu.badpals;
+
 import io.quarkus.test.junit.QuarkusTest;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import edu.badpals.domain.MagicalItem;
 
 @QuarkusTest
 public class RepoTest {
