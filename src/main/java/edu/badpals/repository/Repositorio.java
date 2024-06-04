@@ -9,5 +9,6 @@ public class Repositorio {
     RepoItem repoItem;
     @Inject
     RepoWizard repoWizard;
-    
+    @Inject
+    RepoOrder repoOrder;
 }
