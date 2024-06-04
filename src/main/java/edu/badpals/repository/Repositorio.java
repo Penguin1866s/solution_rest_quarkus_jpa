@@ -7,5 +7,7 @@ import jakarta.inject.Inject;
 public class Repositorio {
     @Inject
     RepoItem repoItem;
+    @Inject
+    RepoWizard repoWizard;
     
 }

@@ -2,6 +2,8 @@ package edu.badpals.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
@@ -22,6 +24,7 @@ public class Wizard {
     @Column(name = "wizard_dexterity")
     private @Getter @Setter int dexterity;
     @Column(name = "wizard_person")
-    private @NonNull @Getter @Setter String person;
-    
+    @Enumerated(EnumType.STRING)
+    private @Getter @Setter Person person;
+
 }

@@ -7,6 +7,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import edu.badpals.domain.MagicalItem;
+import edu.badpals.domain.Wizard;
 
 @QuarkusTest
 public class RepoTest {
