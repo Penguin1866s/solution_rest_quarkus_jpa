@@ -2,9 +2,10 @@ package edu.badpals.repository;
 
 import edu.badpals.domain.Wizard;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
+import io.quarkus.hibernate.orm.panache.PanacheRepositoryBase;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-public class RepoWizard implements PanacheRepository<Wizard> {
+public class RepoWizard implements PanacheRepositoryBase<Wizard, String> {
     
 }
