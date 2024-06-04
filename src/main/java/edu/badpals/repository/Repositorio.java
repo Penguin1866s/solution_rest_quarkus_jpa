@@ -23,4 +23,7 @@ public class Repositorio {
     public Optional<MagicalItem> loadItem(String name){
         return this.repoItem.find("name",name).firstResultOptional();
     }
+    public Optional<MagicalItem> loadItem(MagicalItem item){
+        return this.loadItem(item.getName()).stream().filter(it -> it.getName()==item.getName()&& it.getQuality()==item.getQuality() && it.getType()==item.getType()).findFirst();
+    }
 }
