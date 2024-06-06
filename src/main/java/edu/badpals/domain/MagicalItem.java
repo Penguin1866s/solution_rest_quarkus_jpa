@@ -2,6 +2,7 @@ package edu.badpals.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Entity
@@ -17,9 +18,13 @@ public class MagicalItem {
     private @NonNull @Getter @Setter String name;
 
     @Column(name = "item_quality")
-    private @Getter @Setter int quality;
+    @NotNull
+    private @NonNull @Getter @Setter int quality;
 
     @Column(name = "item_type", insertable = false, updatable = false)
-    private @Getter @Setter String type;
+    @NotEmpty
+    private  @NonNull @Getter @Setter String type;
+
+    
 
 }
