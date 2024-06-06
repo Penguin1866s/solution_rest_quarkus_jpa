@@ -57,4 +57,12 @@ public class Repositorio {
     public void createItems(List<MagicalItem> items) {
         this.repoItem.persist(items);
     }
+    @Transactional
+    public void deleteItem(MagicalItem item) {
+        PanacheQuery<MagicalItem> targetQuery = this.repoItem.find("name = ?1 and quality = ?2 and type = ?3", item.getName(), item.getQuality(), item.getType());
+        Optional<MagicalItem> resultQuery = targetQuery.firstResultOptional();
+        if(resultQuery.isPresent()){
+            this.repoItem.delete(resultQuery.get());
+        }
+    }
 }

@@ -1,3 +1,12 @@
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import com.google.inject.Inject;
+
+import io.quarkus.test.junit.QuarkusTest;
+import io.restassured.http.ContentType;
+import jakarta.annotation.Resource;
+import jakarta.ws.rs.core.MediaType;
 
 @QuarkusTest
 public class ResourceTest {
