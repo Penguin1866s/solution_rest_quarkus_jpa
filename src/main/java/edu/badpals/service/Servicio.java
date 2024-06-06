@@ -1,7 +1,7 @@
 package edu.badpals.service;
 
-import java.util.Optional;
 import java.util.List;
+import java.util.Optional;
 
 import edu.badpals.domain.MagicalItem;
 
@@ -11,5 +11,4 @@ public interface Servicio {
     List<MagicalItem> cargaItems(String name);
     Optional<MagicalItem> creaItem(MagicalItem item);
     void eliminaItem(MagicalItem item);
-    
 }

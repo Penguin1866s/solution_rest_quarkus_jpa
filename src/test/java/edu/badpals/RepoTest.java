@@ -17,6 +17,8 @@ import edu.badpals.domain.MagicalItem;
 import edu.badpals.domain.Order;
 import edu.badpals.domain.Wizard;
 import edu.badpals.repository.Repositorio;
+import edu.badpals.service.ServiceItem;
+
 
 @QuarkusTest
 public class RepoTest {
@@ -27,8 +29,8 @@ public class RepoTest {
 	 @Inject
 	 Repositorio repo;
 
-	// @Inject
-    // ServiceItem servicio;
+	 @Inject
+     ServiceItem servicio;
 
     /**
 	 * Tests sobre los mappings
