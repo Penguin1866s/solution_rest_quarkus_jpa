@@ -48,4 +48,13 @@ public class Repositorio {
         return Optional.ofNullable(order);
 
     }
+    @Transactional
+    public void createItem(String name, int quality, String type) {
+        MagicalItem item = new MagicalItem(name, quality, type);
+        this.repoItem.persist(item);
+    }
+    @Transactional
+    public void createItems(List<MagicalItem> items) {
+        this.repoItem.persist(items);
+    }
 }
